@@ -1,12 +1,11 @@
-flashBlockDetect = function(flashNotInstalled, flashDisabled){
+flashBlockDetect = function(callbackMethod){
+  var return_value = 0;
 	if ( navigator.plugins["Shockwave Flash"] ) {
 		if (navigator.userAgent.indexOf('MSIE') > -1) {
 			try {
 			  new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
 			} catch (e) {
-			  if (flashDisabled && typeof(flashDisabled) === "function") {
-					flashDisabled(); 
-				}
+			  return_value = 2;
 			}
 		} else {
 		  embed_length = $('embed').length;
@@ -15,24 +14,25 @@ flashBlockDetect = function(flashNotInstalled, flashDisabled){
 				/* Mac / Chrome using FlashBlock + Mac / Safari using AdBlock */
 				$('object, embed').each(function() {
 				  if( $(this).css('display') === 'none' ){
-				    if (flashDisabled && typeof(flashDisabled) === "function") {  
-							flashDisabled(); 
-						}
+				    return_value = 2;
 					}
 				});			
 			} else {
 				/* Mac / Firefox using FlashBlock */
 				if( $('div[bginactive]').length > 0 ){
-				  if (flashDisabled && typeof(flashDisabled) === "function") {  
-						flashDisabled(); 
-					}
+				  return_value = 2;
 				}
 			}
 		}
 	} else {
 		/* If flash is not installed */
 		if (flashNotInstalled && typeof(flashNotInstalled) === "function") {  
-			flashNotInstalled(); 
+		  return_value = 1;
 		}
+	}
+  if (callbackMethod && typeof(callbackMethod) === "function") {
+		callbackMethod(return_value);
+	} else {
+	  return return_value;
 	}
 }

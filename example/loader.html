@@ -7,15 +7,14 @@
 </head>
 <body bgcolor="#000000">
 <script>
-function flashNotInstalled(){
-	alert('flash is not installed');
-}
-function flashDisabled(){
-	alert('flash is disabled');
+function callbackMethod(val) {
+  if (val > 0) {
+    alert(val == 1 ? 'flash is not installed' : 'flash is disabled');
+  } 
 }
 
 $(window).load(function(){
-	flashBlockDetect(flashNotInstalled, flashDisabled);
+	flashBlockDetect(callbackMethod);
 });
 </script>
 
