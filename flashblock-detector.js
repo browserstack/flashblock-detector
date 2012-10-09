@@ -1,28 +1,6 @@
-/* For all browsers except IE 
-function hasPlugin(name) {
-    name = name.toLowerCase();
-    var plugins = window.navigator.plugins;
-    for (var i=0, len = plugins.length; i  -1) {
-            return true;
-        }
-    }
-    return false;
-}*/
-
-
-/* For IE 
-function hasPluginIE(name) {
-    try {
-        new ActiveXObject(name);
-        return true;
-    } catch (e) {
-        return false;
-    }
-}*/
-
 flashBlockDetect = function(flashNotInstalled, flashDisabled){
 
-	if ( navigator.plugins["Shockwave Flash"] && swfobject.hasFlashPlayerVersion("9.0.115") ) {
+	if ( navigator.plugins["Shockwave Flash"] ) {
 		
 		if (navigator.userAgent.indexOf('MSIE') > -1) {
 		
