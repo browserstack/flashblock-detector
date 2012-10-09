@@ -1,4 +1,3 @@
-
 # Flashblock Detector
 
 Flash Block Detector is a lightweight JQuery file which detects if Flash is disabled on a browser. The function provides 2 callback functions
@@ -7,7 +6,7 @@ Flash Block Detector is a lightweight JQuery file which detects if Flash is disa
 
 ### Usage
 
-Just include the `flashblock-detector.js` file in the title of your page and call the flashBlockDetect() function on document.ready().\
+Just include the `flashblock-detector.js` file in the title of your page and call the flashBlockDetect() function on document.ready().
 
 ### Flash blockers covered
 
@@ -28,7 +27,6 @@ Just include the `flashblock-detector.js` file in the title of your page and cal
 
 #### Windows:
 
-\f1\fs24 \cf0   * 
-\f0\fs26 \cf2 IE\
-       1. Shockwave Player disabled on IE\
-       2. AdBlock}
+*    IE
+     1. Shockwave Player disabled on IE
+     2. AdBlock
