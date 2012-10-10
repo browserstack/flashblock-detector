@@ -25,10 +25,8 @@ flashBlockDetect = function(callbackMethod){
 			}
 		}
 	} else {
-		/* If flash is not installed */
-		if (flashNotInstalled && typeof(flashNotInstalled) === "function") {  
-		  return_value = 1;
-		}
+		/* If flash is not installed */  
+		return_value = 1;
 	}
   if (callbackMethod && typeof(callbackMethod) === "function") {
 		callbackMethod(return_value);
