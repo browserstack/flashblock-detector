@@ -17,16 +17,14 @@ Just include the `flashblock-detector.js` file in the title of your page and cal
 *    Chrome
      1. Flashblock
      2. AdBlock Pro
-     3. Kill-Flash
 
 
 *    Firefox
      1. Flashblock 1.5.15.1
-     2. Image and Flash Blocker 0.7
 
 
 *    Safari
-     1. AdBlock
+     1. ClickToFlash
 
 #### Windows:
 
