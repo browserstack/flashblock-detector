@@ -2,9 +2,9 @@
 
 Flash Block Detector is a lightweight JQuery file which detects if Flash is disabled on a browser. The function expects a callback function to execute. It calls function with an integer argument, where:
 
-0. all well
-1. flash is not installed
-2. some flashblocker plugin is enabled
+     0 - all well
+		 1 - flash is not installed
+		 2 - some flashblocker plugin is enabled
 
 ### Usage
 
